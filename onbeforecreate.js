@@ -30,4 +30,4 @@ const obr = component => Object.assign( {}, component, {
 } )
 
 if( typeof module !== 'undefined' ) module[ 'exports' ] = interface
-else window.interface = interface
+else window.obr = interface
