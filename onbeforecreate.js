@@ -2,15 +2,16 @@ const circumventions = new Set()
 
 const obr = component => Object.assign( {}, component, {
   oninit : vnode => {
-    if( component.oninit )
+    let shouldcreate
+
+    if( component.onbeforecreate )
+      shouldcreate = component.onbeforecreate.call( vnode.state, vnode )
+
+    if( shouldcreate === false )
+      circumventions.add( vnode )
+
+    else if( component.oninit )
       component.oninit.call( vnode.state, vnode )
-
-    if( component.onbeforecreate ){
-      const output = component.onbeforecreate.call( vnode.state, vnode )
-
-      if( output === false )
-        circumventions.add( vnode )
-    }
   },
 
   view : vnode =>
