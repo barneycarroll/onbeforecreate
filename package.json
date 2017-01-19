@@ -1,0 +1,21 @@
+{
+  "name": "onbeforecreate",
+  "description": "Allow Mithril components to circumvent DOM creation",
+  "author": "Barney Carroll <barney.carroll@gmail.com>",
+  "license": "MIT",
+
+  "main": "onbeforecreate",
+
+  "bugs": {
+    "url": "https://github.com/barneycarroll/onbeforecreate/issues"
+  },
+  "homepage": "https://github.com/barneycarroll/onbeforecreate#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barneycarroll/onbeforecreate.git"
+  },
+
+  "peerDependencies": {
+    "mithril": "1.0.0-rc.8"
+  }
+}
