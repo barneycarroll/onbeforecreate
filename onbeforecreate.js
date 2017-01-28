@@ -1,6 +1,6 @@
 const circumventions = new Set()
 
-const obr = component => Object.assign( {}, component, {
+const obc = component => Object.assign( {}, component, {
   oninit : vnode => {
     let shouldcreate
 
@@ -29,5 +29,5 @@ const obr = component => Object.assign( {}, component, {
   }
 } )
 
-if( typeof module !== 'undefined' ) module[ 'exports' ] = interface
-else window.obr = interface
+if( typeof module !== 'undefined' ) module[ 'exports' ] = obc
+else window.obc = obc
